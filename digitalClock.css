@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Bree+Serif&family=Nunito:wght@500&family=Poppins:wght@700&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Bree+Serif&family=Nunito:wght@500&family=Poppins:wght@700&family=Rubik&family=Source+Code+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Source+Code+Pro:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.sidebar {
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(210, 210, 210);
+    opacity: 0.8;
+    color: rgb(0, 0, 0);
+    /* position: fixed; */
+}
+
+.workarea {
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(23, 39, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.sidebarContent {
+    margin: 72px 20px 10px 20px;
+    padding: 20px 15px;
+}
+
+.sidebarContent h1 {
+    font-size: 3.6rem;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebarContent span {
+    font-size: 1.1rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+hr {
+    width: 15vw;
+    height: 1.3px;
+    background-color: rgb(0, 34, 255);
+    position: absolute;
+    left: 28px;
+}
+
+.navbar {
+    /* background-color: white; */
+    width: 15vw;
+    height: 30vh;
+    margin: 30px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav ul li div {
+    /* background-color: violet; */
+    width: 15vw;
+    height: 7vh;
+    margin: 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar nav ul li {
+    list-style: none;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.bi-arrow-up-right-circle-fill::before {
+    content: "\f140";
+    font-size: 30px;
+    color: rgb(0, 179, 255);
+    padding: 20px;
+}
+
+/* Working Area - Digital Clock */
+/* #workHR{
+    width: 75vw;
+    height: 5px;
+    background-color: white;
+    position: fixed;
+    left: 377px;
+    border: 1px solid white;
+    border-radius: 5px;
+} */
+.workarea h1 {
+    display: flex;
+    justify-content: center;
+    margin: 5px 20px 50px 20px;
+    font-size: 3.9rem;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #060080;
+    background-color: white;
+    border-radius: 15px;
+    font-weight: 50px;
+}
+
+.digitalBox {
+    /* background-color: red; */
+    border: 4px solid #339FFF;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition-property: all;
+    transition: 0.5s ease-in-out;
+
+}
+
+.digitalBox:hover {
+    background-color: #339FFF;
+    color: white;
+
+}
+
+#date {
+    font-size: 4.3rem;
+    font-weight: 50px;
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255)
+}
+
+.Time {
+    color: white;
+    font-size: 4.7rem;
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#period {
+    font-size: 1.8rem;
+    /* padding: 2px 2px; */
+    margin: 5px 15px;
+    background-color: #339FFF;
+    border-radius: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1665px) {
+    .workarea h1 {
+        font-size: 2.5rem;
+    }
+
+    .digitalBox {
+        width: 45vw;
+        height: 45vh;
+    }
+
+    .digitalBox #date {
+        font-size: 2.2rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 2.9rem;
+    }
+
+    #period {
+        font-size: 1.5rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .sidebarContent span {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 25vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 19vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+    .navbar nav ul li a {
+        font-size: 2.3rem;
+    }
+
+    .navbar nav ul li div {
+        width: 22vw;
+        margin: 20px -17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1980px) {
+    .sidebar {
+        width: 25vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 20vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .digitalBox {
+        width: 43vw;
+        height: 43vh;
+    }
+
+    .digitalBox #date {
+        font-size: 2rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 3rem;
+    }
+
+    #period {
+        font-size: 1.4rem;
+    }
+    .navbar nav ul li a {
+        font-size: 1.9rem;
+    }
+
+    .navbar nav ul li div {
+        width: 23vw;
+        margin: 20px -27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1300px) {
+    .sidebar {
+        width: 30vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 22vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .digitalBox {
+        width: 50vw;
+        height: 40vh;
+    }
+
+    .digitalBox #date {
+        font-size: 2.6rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 3.5rem;
+    }
+
+    #period {
+        font-size: 1.6rem;
+    }
+    .navbar nav ul li a {
+        font-size: 1.75rem;
+    }
+
+    .navbar nav ul li div {
+        width: 23vw;
+        margin: 20px -27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1170px) {
+    .sidebar {
+        width: 34vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 24vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .digitalBox {
+        width: 58vw;
+        height: 45vh;
+    }
+
+    .digitalBox #date {
+        font-size: 2.5rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 3.6rem;
+    }
+
+    #period {
+        font-size: 1.9rem;
+    }
+    .navbar nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    .navbar nav ul li div {
+        width: 22vw;
+        margin: 20px -17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1035px) {
+    .workarea h1 {
+        font-size: 2.5rem;
+    }
+
+    .digitalBox {
+        width: 53vw;
+        height: 35vh;
+    }
+
+    .digitalBox #date {
+        font-size: 2rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 2.3rem;
+    }
+
+    #period {
+        font-size: 1.1rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 1.75rem;
+        width: 20vw;
+    }
+
+    .sidebarContent span {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 28vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 19vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .navbar nav ul li div {
+        width: 25vw;
+        margin: 20px -30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 911px) {
+    .workarea h1 {
+        font-size: 2.1rem;
+    }
+
+    .digitalBox {
+        width: 59vw;
+        height: 30vh;
+    }
+
+    .digitalBox #date {
+        font-size: 1.8rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 2.4rem;
+    }
+
+    #period {
+        font-size: 1.1rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 1.6rem;
+        width: 23vw;
+    }
+
+    .sidebarContent span {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 28vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 20vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .navbar nav ul li div {
+        width: 28vw;
+        margin: 20px -35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebarContent {
+        margin: 57px 27px 10px 7px;
+        padding: 20px 15px;
+    }
+}
+@media (max-width: 744px) {
+    .workarea h1 {
+        font-size: 2rem;
+    }
+
+    .digitalBox {
+        width: 55vw;
+        height: 30vh;
+    }
+
+    .digitalBox #date {
+        font-size: 1.19rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 2.6rem;
+    }
+
+    #period {
+        font-size: 1rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 1.2rem;
+        width: 23vw;
+    }
+
+    .sidebarContent span {
+        font-size: 0.6rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 28vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 20vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    .navbar nav ul li div {
+        width: 28vw;
+        margin: 20px -26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebarContent {
+        margin: 57px 27px 10px 7px;
+        padding: 20px 15px;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 25px;
+        color: rgb(0, 179, 255);
+        padding: 10px;
+    }
+}
+@media (max-width: 608px) {
+    .workarea h1 {
+        font-size: 1.5rem;
+    }
+
+    .digitalBox {
+        width: 55vw;
+        height: 27vh;
+    }
+
+    .digitalBox #date {
+        font-size: 1.1rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 2.3rem;
+    }
+
+    #period {
+        font-size: 1rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 1rem;
+        width: 23vw;
+    }
+
+    .sidebarContent span {
+        font-size: 0.5rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 28vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 20vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 28px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 1rem;
+    }
+
+    .navbar nav ul li div {
+        width: 28vw;
+        margin: 20px -26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebarContent {
+        margin: 57px 27px 10px 7px;
+        padding: 20px 15px;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 20px;
+        color: rgb(0, 179, 255);
+        padding: 10px;
+    }
+}
+@media (max-width: 580px) {
+    .workarea h1 {
+        font-size: 1.2rem;
+    }
+
+    .digitalBox {
+        width: 66vw;
+        height: 27vh;
+    }
+
+    .digitalBox #date {
+        font-size: 1rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 2rem;
+    }
+
+    #period {
+        font-size: 0.8rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 0.8rem;
+        width: 23vw;
+    }
+
+    .sidebarContent span {
+        font-size: 0.4rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 28vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 20vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 20px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .navbar nav ul li div {
+        width: 28vw;
+        margin: 20px -26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebarContent {
+        margin: 57px 27px 10px 7px;
+        padding: 20px 15px;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 15px;
+        color: rgb(0, 179, 255);
+        padding: 10px;
+    }
+}
+@media (max-width: 471px) {
+    .workarea h1 {
+        font-size: 0.9rem;
+    }
+
+    .digitalBox {
+        width: 66vw;
+        height: 20vh;
+    }
+
+    .digitalBox #date {
+        font-size: 0.8rem;
+    }
+
+    .digitalBox .Time {
+        font-size: 1.5rem;
+    }
+
+    #period {
+        font-size: 0.7rem;
+    }
+
+    .sidebarContent h1 {
+        font-size: 0.6rem;
+        width: 25vw;
+    }
+
+    .sidebarContent span {
+        font-size: 0.4rem;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 28vw;
+        height: 100vh;
+        background-color: rgb(210, 210, 210);
+        opacity: 0.8;
+        color: rgb(0, 0, 0);
+        /* position: fixed; */
+    }
+
+    hr {
+        width: 20vw;
+        height: 1.3px;
+        background-color: rgb(0, 34, 255);
+        position: absolute;
+        left: 15px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 0.6rem;
+    }
+
+    .navbar nav ul li div {
+        width: 28vw;
+        margin: 20px -26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebarContent {
+        margin: 57px 27px 10px 7px;
+        padding: 20px 15px;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 10px;
+        color: rgb(0, 179, 255);
+        padding: 10px;
+    }
+}

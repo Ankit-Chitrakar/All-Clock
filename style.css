@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Bree+Serif&family=Nunito:wght@500&family=Poppins:wght@700&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Bree+Serif&family=Nunito:wght@500&family=Poppins:wght@700&family=Rubik&family=Source+Code+Pro:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.sidebar{
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    color: white;
+    /* position: fixed; */
+}
+.workarea{
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 183);
+    z-index: -78887;
+}
+.sidebarContent{
+    margin: 72px 20px 10px 20px;
+    padding: 20px 15px;
+}
+.sidebarContent h1{
+    font-size: 2.6rem;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebarContent span{
+    font-size: 1.1rem;
+    font-family: 'Source Code Pro', monospace;   
+}
+hr{
+    width: 15vw;
+    height: 1.3px;
+    background-color: white;
+    position: absolute;
+    left: 28px;
+}
+.navbar{
+    /* background-color: white; */
+    width: 15vw;
+    height: 30vh;
+    margin: 30px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+}
+.navbar nav ul li div{
+    /* background-color: violet; */
+    width: 15vw;
+    height: 7vh;
+    margin: 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar nav ul li{
+    list-style: none;
+}
+.navbar nav ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.bi-arrow-up-right-circle-fill::before {
+    content: "\f140";
+    font-size: 30px;
+    color: yellow;
+    padding: 20px;
+}
+
+/* Working Area - Analog Clock */
+.workarea h1{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+/* #workHR{
+    width: 75vw;
+    height: 5px;
+    background-color: white;
+    position: fixed;
+    left: 377px;
+    border: 1px solid white;
+    border-radius: 5px;
+} */
+.workarea h1{
+    font-size: 3.9rem;
+    letter-spacing: 5px;
+    margin-bottom: 3px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+#clockContainer{  
+    position: relative;
+    margin: auto;
+    height: 35vw;
+    width: 35vw; 
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    margin-top: 6vh;
+}
+
+#hour, #minute{
+    position: absolute;
+    background: black;
+    border-radius: 10px; 
+    transform-origin: bottom;
+}
+#second{
+    position: absolute;
+    background: rgb(255, 0, 0);
+    border-radius: 10px; 
+    transform-origin: bottom;
+}
+#hour{
+    width: 1.8%;
+    height: 27%;
+    top: 22.90%;
+    left: 48.90%;
+    /* opacity: 0.8;   */
+}
+#minute{
+    width: 1.4%;
+    height: 37%;
+    top: 13%;
+    left: 48.9%;
+    /* opacity: 0.8;   */
+}
+#second{
+    width: 0.8%;
+    height: 41%;
+    top: 9%;
+    left: 49.25%;
+    /* opacity: 0.8;  */
+    
+}
+
+/* ********media queries********** */
+
+
+@media (max-width: 2071px){
+    #clockContainer{
+        position: relative;
+    margin: auto;
+    height: 35vw;
+    width: 35vw; 
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    margin-top: 8.8vh;
+    }
+    .sidebar{
+        width: 25vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.8;
+        color: white;
+    }
+    .sidebarContent h1{
+        font-size: 2.4rem;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .sidebarContent span{
+        font-size: 1.1rem;
+        font-family: 'Source Code Pro', monospace;   
+    }
+    hr{
+        width: 19vw;
+        height: 1.3px;
+        background-color: white;
+        position: absolute;
+        left: 28px;
+    }
+    .navbar{
+        /* background-color: white; */
+        width: 22vw;
+        height: 30vh;
+        margin: 30px 20px 10px 20px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .navbar nav ul li div{
+        /* background-color: violet; */
+        width: 19vw;
+        height: 7vh;
+        margin: 20px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .navbar nav ul li{
+        list-style: none;
+    }
+    .navbar nav ul li a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 30px;
+        color: yellow;
+        padding: 20px;
+    }
+    .workarea h1{
+        font-size: 3.5rem;
+        letter-spacing: 5px;
+        margin-bottom: 3px;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+
+}
+
+@media (max-width: 1235px){
+    #clockContainer{
+        position: relative;
+    margin: auto;
+    height: 35vw;
+    width: 35vw; 
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    margin-top: 8.8vh;
+    }
+    .sidebar{
+        width: 25vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.8;
+        color: white;
+    }
+    .sidebarContent h1{
+        font-size: 2.1rem;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .sidebarContent span{
+        font-size: 1rem;
+        font-family: 'Source Code Pro', monospace;   
+    }
+    hr{
+        width: 19vw;
+        height: 1.3px;
+        background-color: white;
+        position: absolute;
+        left: 28px;
+    }
+    .navbar{
+        /* background-color: white; */
+        width: 22vw;
+        height: 30vh;
+        margin: 30px 20px 10px 20px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .navbar nav ul li div{
+        /* background-color: violet; */
+        width: 19vw;
+        height: 7vh;
+        margin: 20px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .navbar nav ul li{
+        list-style: none;
+    }
+    .navbar nav ul li a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 26px;
+        color: yellow;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 600px){
+    #clockContainer{
+        position: relative;
+    margin: auto;
+    height: 55vw;
+    width: 55vw; 
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    margin-top: 8.8%;
+    }
+    .sidebar{
+        width: 27vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.8;
+        color: white;
+    }
+    .sidebarContent h1{
+        font-size: 1.1rem;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .sidebarContent span{
+        font-size: 0.5rem;
+        font-family: 'Source Code Pro', monospace;   
+    }
+    hr{
+        width: 22vw;
+        height: 1.3px;
+        background-color: white;
+        position: absolute;
+        left: 15px;
+    }
+    .navbar{
+        /* background-color: white; */
+        width: 22vw;
+        height: 30vh;
+        margin: 30px 20px 10px 20px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .navbar nav ul li div{
+        /* background-color: violet; */
+        width: 19vw;
+        height: 7vh;
+        margin: 20px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .navbar nav ul li{
+        list-style: none;
+    }
+    .navbar nav ul li a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 10px;
+        color: yellow;
+        padding: 20px;
+    }
+    .workarea h1{
+        font-size: 1.7rem;
+        letter-spacing: 5px;
+        margin-bottom: 3px;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+}
+
+@media (max-width: 1000px){
+    #clockContainer{
+        position: relative;
+    margin: auto;
+    height: 55vw;
+    width: 55vw; 
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    margin-top: 8.8%;
+    }
+    .sidebar{
+        width: 27vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.8;
+        color: white;
+    }
+    .sidebarContent h1{
+        font-size: 1.1rem;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .sidebarContent span{
+        font-size: 0.5rem;
+        font-family: 'Source Code Pro', monospace;   
+    }
+    hr{
+        width: 22vw;
+        height: 1.3px;
+        background-color: white;
+        position: absolute;
+        left: 15px;
+    }
+    .navbar{
+        /* background-color: white; */
+        width: 22vw;
+        height: 30vh;
+        margin: 30px 20px 10px 20px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .navbar nav ul li div{
+        /* background-color: violet; */
+        width: 19vw;
+        height: 7vh;
+        margin: 20px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .navbar nav ul li{
+        list-style: none;
+    }
+    .navbar nav ul li a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+    .bi-arrow-up-right-circle-fill::before {
+        content: "\f140";
+        font-size: 10px;
+        color: yellow;
+        padding: 20px;
+    }
+    .workarea h1{
+        font-size: 1.6rem;
+        letter-spacing: 5px;
+        margin-bottom: 3px;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+}
